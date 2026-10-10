@@ -415,7 +415,9 @@ public final class HomelanderMod implements ModInitializer {
             }
         }
         world.spawnParticles(ParticleTypes.EXPLOSION, center.x, center.y + 1, center.z, 4, 1.7, .2, 1.7, 0);
-        world.playSound(null, BlockPos.ofFloored(center), SoundEvents.ENTITY_GENERIC_EXPLODE, SoundCategory.PLAYERS, 1.2f, .8f);
+        
+        world.playSound(null, BlockPos.ofFloored(center), SoundEvents.ENTITY_GENERIC_EXPLODE.value(), SoundCategory.PLAYERS, 1.2f, 0.8f);
+
     }
 
     private static void dash(ServerPlayerEntity p) {
