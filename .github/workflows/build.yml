@@ -1,0 +1,38 @@
+
+name: Build Homelander Minecraft Mod
+
+on:
+  push:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Download source
+        uses: actions/checkout@v4
+
+      - name: Install Java 21
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '21'
+
+      - name: Install Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
+
+      - name: Build Homelander Mod
+        run: gradle --no-daemon build
+
+      - name: Upload JAR
+        uses: actions/upload-artifact@v4
+        with:
+          name: Homelander-Powers-1.21.1
+          path: build/libs/homelander-powers-1.0.0.jar
+          if-no-files-found: error
