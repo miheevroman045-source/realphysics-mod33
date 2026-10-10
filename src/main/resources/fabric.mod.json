@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "homelander",
+  "version": "${version}",
+  "name": "Homelander Powers",
+  "description": "Fan-made Homelander-style armor, laser eyes, flight, shockwave, dash, serum and boss fight.",
+  "authors": ["ChatGPT"],
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": ["com.example.homelander.HomelanderMod"],
+    "client": ["com.example.homelander.HomelanderClient"]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.0",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}

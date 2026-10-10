@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "R R",
+    "N N"
+  ],
+  "key": {
+    "R": {
+      "item": "minecraft:red_wool"
+    },
+    "N": {
+      "item": "minecraft:netherite_boots"
+    }
+  },
+  "result": {
+    "count": 1,
+    "id": "homelander:homelander_boots"
+  }
+}
